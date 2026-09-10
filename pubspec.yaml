@@ -1,0 +1,58 @@
+name: lista_inteligente
+description: "Aplicativo de lista de compras inteligente com IA e backup na nuvem."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Banco de Dados e Persistência Local
+  sqflite: ^2.3.0
+  path: ^1.9.0
+  path_provider: ^2.1.6
+
+  # Firebase - Tempo Real, Login e Banco de Dados
+  firebase_core: ^3.0.0
+  cloud_firestore: ^5.0.0
+  firebase_auth: ^5.0.0
+
+  # Autenticação e Sincronização com Google
+  google_sign_in: ^6.3.0
+  googleapis: ^13.2.0
+  extension_google_sign_in_as_googleapis_auth: ^2.0.1
+
+  # Integração com API de IA (Groq) e Utilitários
+  http: ^1.2.0
+  permission_handler: ^11.3.1
+  intl: ^0.19.0
+  image_picker: ^1.0.7
+  connectivity_plus: ^7.3.1
+  speech_to_text: ^7.4.0
+  google_fonts: ^8.2.1
+  mobile_scanner: ^7.4.0
+  shared_preferences: ^2.5.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: "^0.13.1"
+  sqflite_common_ffi: ^2.3.0
+
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/icone_app.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/carrinho.gif

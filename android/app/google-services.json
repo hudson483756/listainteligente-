@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "68001842267",
+    "project_id": "lista-inteligente-74036",
+    "storage_bucket": "lista-inteligente-74036.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68001842267:android:35f566cb4ebcfcf1866b7e",
+        "android_client_info": {
+          "package_name": "com.mercadosync.mercado_sync"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68001842267-tb6cf5ehuq575tq907ir43u551l1as58.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mercadosync.mercado_sync",
+            "certificate_hash": "cf01a4e95c2a417bd39c3df552b65a243964ade9"
+          }
+        },
+        {
+          "client_id": "68001842267-goepd7qo4fvtr235vlug6br5q8p2h9dc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbw22mKQAfA6jw1cTBbPpNNt6IiryoD2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68001842267-goepd7qo4fvtr235vlug6br5q8p2h9dc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "68001842267-41me2avlv8ucq4m1ha6jb01jhdfgikpf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mercadosync.mercadoSync"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
