@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_typography.dart';
 
 class TermsAndPrivacyScreen extends StatelessWidget {
   const TermsAndPrivacyScreen({super.key});
+
+  final String _webUrl = 'https://hudson483756.github.io/listainteligente-/';
+
+  Future<void> _openWebUrl() async {
+    final Uri url = Uri.parse(_webUrl);
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      debugPrint('Não foi possível abrir a URL: $_webUrl');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +24,13 @@ class TermsAndPrivacyScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.open_in_browser, color: AppColors.primary),
+            tooltip: 'Abrir no navegador',
+            onPressed: _openWebUrl,
+          ),
+        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -60,6 +77,15 @@ class TermsAndPrivacyScreen extends StatelessWidget {
                   '3. Seus Direitos\n'
                   'Você pode solicitar a exclusão da sua conta ou limpar os dados locais salvos no dispositivo a qualquer momento pelas configurações.',
                   style: AppTypography.caption.copyWith(fontSize: 13, height: 1.4),
+                ),
+                const SizedBox(height: 24),
+                SizedBox(
+                  width: double.infinity,
+                  child: OutlinedButton.icon(
+                    onPressed: _openWebUrl,
+                    icon: const Icon(Icons.language),
+                    label: const Text('Ver Versão Online Completa'),
+                  ),
                 ),
               ],
             ),
