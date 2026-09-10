@@ -101,16 +101,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
               const Divider(height: 1),
               ListTile(
-                leading: const Icon(Icons.policy_outlined, color: AppColors.primary),
-                title: const Text('Termos de Uso e Privacidade'),
-                trailing: const Icon(Icons.chevron_right, size: 20),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const TermsAndPrivacyScreen()),
-                  );
-                },
-              ),
+  leading: const Icon(Icons.security, color: AppColors.primary),
+  title: Text(
+    'Termos de Uso e Privacidade',
+          style: AppTypography.titleMedium.copyWith(
+            color: Colors.white, // Corrigido para ficar visível no fundo escuro
+          ),
+        ),
+        trailing: const Icon(Icons.chevron_right, color: Colors.grey, size: 20),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const TermsAndPrivacyScreen()),
+          );
+        },
+      ),
             ]),
           ],
         ),
